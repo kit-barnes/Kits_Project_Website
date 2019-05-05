@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<title>Pythagorean Proof</title>
+<head>
+
+<script type="text/javascript">
+
+    var timeStep = 0;
+	var step = 0;
+	var restart = false;
+	var next = false;
+	var auto = false;
+	var Restart, Next, Auto;
+	var ShapeA, ShapeB;
+	var Perpendicular, InitialShapes, LineSkew1, LineRot;
+	var Commentary;
+	
+	function start(t) {
+		if (!t) {
+			Perpendicular.setAttributeNS( null, "opacity", 0 );
+			InitialShapes.setAttributeNS( null, "opacity", 0 );
+			LineSkew1.setAttributeNS( null, "opacity", 0 );
+			LineRot.setAttributeNS( null, "opacity", 0 );
+			ShapeB.setAttributeNS( null, "opacity", 0 );
+			ShapeA.setAttributeNS( null, "opacity", 0 );
+			Next.disabled = false;
+			Commentary.innerHTML = 'Squares are constructed on each side of \
+				the right triangle.  Each square (<b>a</b>, <b>b</b> & <b>c</b>) has an area \
+				equal to the square of its side. To prove the theorem, \
+				show that the area of square <b>c</b> (on the hypotenuse) is equal \
+				to the sum of the areas of squares <b>a</b> & <b>b</b>.';
+		}
+	}
+	function bisect(t) {
+		if (!t) {
+			InitialShapes.setAttributeNS( null, "opacity", 1 );
+			Commentary.innerHTML = 'Bisect squares <b>a</b> & <b>b</b> with a line \
+				through the right angle vertex of the triangle.  \
+				The area of each colored triangle is equal to \
+				half the area of its associated square.';
+		}
+	}
+	function skewA(t) {
+		if (!t) {
+			Restart.disabled = false;
+			ShapeA.setAttributeNS( null, "opacity", 1 );
+			Commentary.innerHTML = 'Skew colored triangle <b>a</b> by moving \
+				the vertex at the right angle of the original triangle \
+				along the <b>b</b> side as shown.  The area of the colored triangle is \
+				not changed. (Consider the unmoving edge to be the base, \
+				then the height remains constant \
+				since the <b>b</b> side is parallel to the base.)';
+		}
+		// skew A - points:"310,310 210,y 310,410" y:310->110 
+		var y = 310 - 200*t;
+		var points = "310,310 210,"+y+" 310,410";
+		ShapeA.setAttributeNS( null, "points", points );
+	}
+	function skewB(t) {
+		if (!t) {
+			ShapeB.setAttributeNS( null, "opacity", 1 );
+			Commentary.innerHTML = 'Skew colored triangle <b>b</b> in the same manner, \
+				moving its vertex along the <b>a</b> side. Again the area is unchanged.';
+		}
+		// skew B - points="210,110 x,310 10,110" x:210->310
+		var x = 210 + 100*t;
+		var points = "210,110 "+x+",310 10,110";
+		ShapeB.setAttributeNS( null, "points", points );
+	}
+	function rotA(t) {
+		if (!t) {
+			LineSkew1.setAttributeNS( null, "opacity", 1 );
+			Commentary.innerHTML = 'Rotate the skewed triangle <b>a</b> around \
+				its vertex at the angle of the <b>a</b> & <b>c</b> sides \
+				by sweeping the edges currently congruent with the <b>a</b> \
+				& <b>c</b> sides through their respective \
+				squares to land on the adjacent sides.  Since the length of these \
+				two sides and the angle between them is unchanged, the rotated \
+				triangle is congruent to (and has the same area as) the unrotated one.';
+		}
+		var theta = 90*t*Math.PI/180;
+		var x = 310 - 100*Math.sin(theta);
+		var y = 310 + 100*Math.cos(theta);
+		var points = " "+x+","+y;
+		theta = (90*t + 63.435)*Math.PI/180;
+		x = 310 - 223.6*Math.cos(theta);
+		y = 310 - 223.6*Math.sin(theta);
+		points = "310,310 "+x+","+y+points;
+		ShapeA.setAttributeNS( null, "points", points );
+	}
+	function rotB(t) {
+		if (!t) {
+			Commentary.innerHTML = 'Rotate the skewed triangle <b>b</b> similarly. \
+				Its area is likewise unchanged.';
+		}
+		var theta = 90*t*Math.PI/180;
+		var x = 210 - 200*Math.cos(theta);
+		var y = 110 + 200*Math.sin(theta);
+		var points = " "+x+","+y;
+		theta = (90*t + 26.565)*Math.PI/180;
+		x = 210 + 223.6*Math.sin(theta);
+		y = 110 + 223.6*Math.cos(theta);
+		points = "210,110 "+x+","+y+points;
+		ShapeB.setAttributeNS( null, "points", points );
+	}
+	function skewAB(t) {
+		if (!t) {
+			Perpendicular.setAttributeNS( null, "opacity", 1 );
+			LineRot.setAttributeNS( null, "opacity", 1 );
+			Commentary.innerHTML = 'Construct a perpendicular to side <b>c</b> of the \
+				original triangle from its right angle vertex extending to \
+				the opposite side of square <b>c</b>. Skew both rotated triangles \
+				by moving their common vertex along the perpendicular to side <b>c</b>. \
+				Their areas are unchanged because the perpendicular is parallel to \
+				both their bases.';
+		}
+		var x = 210 + 80*t;
+		var y = 310 - 40*t;
+		// second skew A
+		var points = "310,310 510,210 "+x+","+y;
+		ShapeA.setAttributeNS( null, "points", points );
+		// second skew B
+		points = "210,110 410,10 "+x+","+y;
+		ShapeB.setAttributeNS( null, "points", points );
+	}
+	function done(t) {
+		// just display result for a while
+		if (!t) {
+			Commentary.innerHTML = 'Square <b>c</b> is divided into two rectangles \
+				 by the perpendicular. Since the area of each rectangle is \
+				 double the area of its enclosed colored triangle, the rectangles\' areas \
+				 are the same as those of squares <b>a</b> & <b>b</b> respectively \
+				 and therefore the sum of the areas of squares <b>a</b> & <b>b</b> equals \
+				 the area of square <b>c</b>. <b>QED</b>';
+		}
+	}
+
+	var steps = [ start, bisect, skewA, skewB, rotA, rotB, skewAB, done ];
+
+    function demoMain() {
+		ShapeA = document.getElementById("ShapeA");
+		ShapeB = document.getElementById("ShapeB");
+		Perpendicular = document.getElementById("Perpendicular");
+		Restart = document.getElementById("Restart");
+		Next = document.getElementById("Next");
+		Auto = document.getElementById("Auto");
+		InitialShapes = document.getElementById("InitialShapes");
+		LineSkew1 = document.getElementById("LineSkew1");
+		LineRot = document.getElementById("LineRot");
+		Commentary = document.getElementById("Commentary");
+		
+		tick();
+    }
+
+	function tick() {
+        window.setTimeout(tick, 1000/60);
+		if (restart) {
+			restart = false;
+			Next.disabled = true;
+			next = false;
+			step = 0;
+			timeStep = 0;
+		}
+		else if (next) {
+			next = false;
+			steps[step](1);		// finish last step
+			step++;
+			if (step >= steps.length) {
+				if (auto) {
+					step = 0;
+					timeStep = 0;
+				} else {
+					step = steps.length - 1;
+					Next.disabled = true;
+				}
+			}
+			else {
+				timeStep = 0;
+			}
+		}
+		var timeNow = new Date().getTime();
+		if (timeStep == 0) {
+			steps[step](0);			// initialize step
+			timeStep = timeNow;
+		} else {
+			var dt = timeNow - timeStep;
+			// animate step for first 2 seconds
+			if (dt <= 2000) steps[step](dt/2000);
+			// show result for 3 seconds
+			if (dt <= 5000) return;
+			// repeat this step if not loop
+			if (auto) next = true;
+			else timeStep = 0;
+		}
+    }
+
+	function onClick(element) {
+		if (element == Restart) {
+			restart = true;
+		} else if (element == Next) {
+			next = true;
+		} else if (element == Auto) {
+			auto = !auto;
+			element.innerHTML = auto? "Manual": "Auto-Next";
+		} 
+	}
+	
+</script>
+
+<style>
+	button {
+		width:					6em;
+		background-image:		linear-gradient(to bottom, #aad, #ada);
+	}
+</style>
+
+</head>
+
+<body onload="demoMain();">
+	<center>
+		<h1>
+			Pythagorean Theorem
+		</h1>
+		<h3> 
+		"In a right triangle, the square of the hypotenuse is equal to 
+		the sum of the squares of the other two sides."
+		</h3> 
+	</center>
+	
+	<table align="left" cellpadding="10"><tr><td>
+		<!-- using table just to get everything to flow arround it -->
+		<svg height="420" width="520" xmlns="http://www.w3.org/2000/svg">
+
+			<polygon id="ShapeA" opacity="1" style="fill:rgba(0,200,0,0.5);"
+				points="310,310 210,310 310,410" />
+			<!-- points are ( rotation center, right angle/first slew, second slew ) -->
+			<polygon id="ShapeB" style="fill:rgba(0,0,200,0.3);" opacity="1"
+				points="210,110 210,310 10,110" />
+
+			<g id="InitialShapes" opacity="1" >
+				<polygon style="fill:rgba(0,200,0,0.5);" points="310,310 210,310 310,410" />
+				<polygon style="fill:rgba(0,0,200,0.3);" points="210,110 210,310 10,110" />
+			</g>
+		
+			<g id="LineSkew1" opacity="1" >
+				<polyline title="SkewA1" stroke="#888" stroke-width="2" 
+					points="210,110 310,410" />
+				<polyline title="SkewB1" stroke="#888" stroke-width="2" 
+					points="10,110 310,310" />
+			</g>
+		
+			<g id="LineRot" opacity="1" >
+				<polyline title="RotA" fill="none" stroke="#888" stroke-width="2" 
+					points="210,310 510,210" />
+				<polyline title="RotB" fill="none" stroke="#888" stroke-width="2" 
+					points="210,310 410,10" />
+			</g>
+		
+	 
+			<polygon title="Square A" fill="none" stroke="#808080" stroke-width="5" 
+				points="210,310 310,310 310,410 210,410" />
+			<text x="250" y="370" style="fill:#888;font-size:48;">a</text>
+			<polygon title="Square B" fill="none" stroke="#808080" stroke-width="5" 
+				points="210,310 10,310 10,110 210,110" />
+			<text x="100" y="230" style="fill:#888;font-size:48;">b</text>
+			<polygon title="Square C" fill="none" stroke="#808080" stroke-width="5" 
+				points="310,310 510,210 410,10 210,110" />
+			<text x="350" y="180" style="fill:#888;font-size:48;">c</text>
+			<polygon title="Triangle" fill="none" stroke="black" stroke-width="5" 
+				points="210,310 310,310 210,110" />
+			<polyline title="Right Angle" fill="none" stroke="black" stroke-width="3" 
+				points="225,310 225,295 210,295" />
+				
+			<g id="Perpendicular" opacity="1" >
+				<polyline title="Perpendicular Line" fill="none" stroke="black" stroke-width="2" 
+					points="210,310 490,170" />
+				<polyline title="Perpendicular Angle" fill="none" stroke="black" stroke-width="2" 
+					points="278,276 272,264 284,258" />
+			</g>
+		</svg>
+	</td></tr></table>
+	
+	<h2> 
+		a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+	</h2> 
+	
+	<button type="button" id="Restart" onclick="onClick(this);" >Restart</button>
+	<button type="button" id="Next" onclick="onClick(this);" >Next</button></td>
+	<button type="button" id="Auto" onclick="onClick(this);" >Auto-Next</button></td>
+	
+	<p  id="Commentary" >Step commentary goes here</p>
+	
+</body>
+
+</html>
