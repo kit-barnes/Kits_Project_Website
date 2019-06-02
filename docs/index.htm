@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<title>Kit's GitHub Site</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('lake.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("mountain.jpg");
+  min-height: 100%;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#projects" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROJECTS</a>
+<!--
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+ -->
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#projects" class="w3-bar-item w3-button" onclick="toggleFunction()">PROJECTS</a>
+<!--
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+ -->
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container" id="home">
+    <div class="w3-display-bottomleft w3-padding-large w3-margin" style="white-space:nowrap;">
+	  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">KIT'S PROJECTS</span>
+    </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT THIS SITE</h3>
+  <p class="w3-center"><em>Things I've spent my time on<br>
+  (other than family, work, chores, skiing, science fiction, photography, video games... )</em></p>
+  <p>I took my MSEE to work for the old Bell System and spent my time mostly designing and coding embedded systems. While I've been retired for a while now,
+  I still enjoy getting something working the way I think it should.
+  Admittedly, the way I think something should work occasionally has a tendency to squirm and mutate
+  as I find myself banging my head against some wall</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="WCBarnes.jpg" class="w3-round w3-image" alt="Photo of Me" width="337" height="434">
+      <p><b>Kit Barnes</b></p><br>
+    </div>
+
+    <!-- Hide this text on small devices w3-hide-small -->
+    <div class="w3-col m6 w3-padding-large">
+      <p>
+		Welcome to my website.
+		The projects below are a sampling of the things I've been playing with for the last 50 years.
+		Some of them will link to their own repositories.
+		Others are only documented by pages on this site.
+		Few of them I really consider complete.
+		All of them have helped stretch my brain a bit.
+		I'm publishing them here with the hope that some portion may be useful.
+	  </p>
+    </div>
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container" id="projects">
+  <div class="w3-display-bottommiddle w3-padding-large w3-margin">
+    <span class="w3-xxlarge w3-text-white w3-wide">PROJECTS</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64">
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+  
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card w3-container" style="height:300px">
+		<h3 class="w3-center">AltiLog</h3>
+		<img src="AltiLog.jpg" style="max-height:50%" onclick="onClick(this)" class="w3-image w3-hover-opacity" alt="Altilog">
+		<p>Android app using the phone's pressure sensor to record altitude vs time</p>
+	  </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card w3-container" style="height:300px">
+		<h3 class="w3-center">smartLEDdimmer</h3>
+		<img src="smartLEDdimmer.jpg" style="max-height:50%" onclick="onClick(this)" class="w3-image w3-hover-opacity" alt="smartLEDdimmer">
+		<p>ESP8266-Arduino based, SmartThings connected 12v analog LED dimmer</p>
+	  </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card w3-container" style="height:300px">
+		<h3 class="w3-center">XmasLites</h3>
+		<img src="xmasLites.jpg" onclick="onClick(this)" style="height:70%;float:left" class="w3-image w3-hover-opacity" alt="XmasLites">
+		<p>A WS281X RGB LED controller, ESP8266-NodeMCU based and browser controlled</p>
+	  </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card w3-container" style="height:300px">
+		<h3 class="w3-center">Pythagorean</h3>
+		<a href="pyth.htm" target="_blank">
+			<img src="pyth.jpg" style="max-height:50%" class="w3-image w3-hover-opacity" alt="Pythagorean">
+		</a>
+		<p>An animated web page demonstrating proof of the Pythagorean Theorem</p>
+	  </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card w3-container" style="height:300px">
+		<h3 class="w3-center">Gobblet</h3>
+		<img src="Gobblet.jpg" onclick="onClick(this)" style="height:70%;float:left" class="w3-image w3-hover-opacity" alt="Gobblet">
+		<p>
+			Android app that plays the game
+			<a href="https://en.wikipedia.org/wiki/Gobblet" target="_blank">Gobblet</a>
+		</p>
+	  </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card w3-container" style="height:300px">
+		<h3 class="w3-center">Digital Clock</h3>
+		<a href="clock/index.htm" target="_blank">
+			<img src="clock/clock_img0.jpg" style="max-height:50%" class="w3-image w3-hover-opacity" alt="Clock">
+		</a>
+		<p>In continuous use since the early 1970's</p>
+	  </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card w3-container" style="height:300px">
+		<h3 class="w3-center">Pentago</h3>
+		<img src="Pentago.jpg" onclick="onClick(this)" style="height:70%;float:left" class="w3-image w3-hover-opacity" alt="Pentago">
+		<p>
+			Android app that plays the game
+			<a href="https://en.wikipedia.org/wiki/Pentago" target="_blank">Pentago</a>
+		</p>
+	  </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card w3-container" style="height:300px">
+		<h3 class="w3-center">Quadruped Robot</h3>
+		<img src="Quadruped.jpg" style="max-height:50%" onclick="onClick(this)" class="w3-image w3-hover-opacity" alt="Quadruped Robot">
+		<p>
+			Got it to walk! See the hilariously painful evolution on
+			<a href="https://www.youtube.com/watch?v=pi3n5ZYatKs&list=PLADDA0AFD5035F885"
+				target="_blank">YouTube
+			</a>
+		</p>
+	  </div>
+    </div>
+	
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent">
+	<img src="undercon.gif" alt="UNDER CONSTRUCTION">
+	<p/>
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+ -->
+
+<!-- Container (Contact Section)
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+ -->
+
+<!-- Footer
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ -->
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
