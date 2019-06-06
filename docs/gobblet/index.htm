@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title>Gobblet Noob</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #333;
+  line-height: 1.6;
+}
+
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('GobbletStudio.jpg');
+    background-attachment: scroll;
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+@media only screen and (min-width: 601px) {
+  .photos {width: 50%; float: right;}
+}
+
+</style>
+<body>
+
+<div class="bgimg w3-display-container" id="home">
+    <div class="w3-display-bottomleft w3-padding-large w3-margin" style="white-space:nowrap;">
+	  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">GOBBLET NOOB</span>
+    </div>
+</div>
+
+<p></p>
+
+<div style="margin:16px 16px 16px 32px;">
+	<div class="w3-row photos w3-padding">
+		<div class="w3=col">
+			<div class="w3-row">
+
+				<div class="w3-col l6 m6 s6" style="padding: 0px 16px 16px 0px;">
+					<a href="Gobblet.jpg" target="_blank" ><img src="Gobblet.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="Gobblet Options"></a>
+				</div>
+
+				<div class="w3-col l6 m6 s6" style="padding: 0px 0px 16px 16px;">
+					<a href="GobbletOptions.jpg" target="_blank" ><img src="GobbletOptions.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="Gobblet Options"></a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<p>
+	</p><p>
+		Gobblet Noob is an Android app that plays the game
+		<a href="https://en.wikipedia.org/wiki/Gobblet" target="_blank" >Gobblet</a>.
+		Originally built using the Android Development Toolkit in Eclipse,
+		the app is currently built with Android Studio.
+		The game of Gobblet was designed by Thierry Denoual.
+	</p><p>
+		The app provides four levels of computer opponent
+		which can be selected to play either, neither, or both sides
+		at any point in the game.
+		Unlimited undo's allow you to back the game up and try again.
+		
+	</p><p>
+		Here is a description of the game and its rules from the Help dialog of the app:
+	</p><p style="padding 0px 32px 0px 32px">
+		The object of the game is to get 4 of your cups in a row.
+		Two players each have 12 inverted cups initially arranged in 3 nested stacks off the board.
+		White moves first. Cups may be placed over smaller cups.
+		Cups moved from off the board must be placed on an empty position
+		unless the cup they cover is one of an opposing 3-in-a-row.
+		You lose if you uncover a win unless you can cover another cup in the win.
+		Draws can occur by agreement or by moves repeated 3 times.
+		If you cannot place a lifted piece you lose.
+	</p><p>
+		The app will only allow you to move one (of your own) cups at a time.
+		Once you've picked up any of your cups
+		(by touching it)
+		you must move it to a different position on the board
+		(by dragging it there or by just tapping the new position).
+		You can tap UNDO quickly as many times as you want
+		and that many moves will be undone at the speed of the animation.
+	</p><p>
+		I coded this app in 2012 for my Samsung Galaxy S3 (running Ice Cream Sandwich)
+		using the Android Development Tools plugin for the Eclipse IDE.
+		That original APK no longer works on newer versions of Android,
+		I moved my code into Android Studio, raised the target API,
+		and it worked again without any code changes.
+		I've been using that version since 2016
+		and it's currently working fine on Android Pie.
+		If you're willing to trust both me and GitHub, you can install this APK:
+		<br><center><a href="GobbletNoob.apk">GobbletNoob.apk</a></center><br>
+	</p><p>
+		You can build your own version by cloning this repository:
+		<br><center><a href="https://github.com/kit-barnes/GobbletNoob">
+			https://github.com/kit-barnes/GobbletNoob
+		</a></center><br>
+	</p>
+</div>
+
+</body>
+</html>
