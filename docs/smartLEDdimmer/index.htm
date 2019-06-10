@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<title>Smart LED Dimmer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #333;
+  line-height: 1.6;
+}
+
+p {padding: 0px 16px 0px 16px;}
+
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('dimmer1.jpg');
+    background-attachment: scroll;
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+@media only screen and (min-width: 601px) {
+  .photos {width: 50%; float: left;}
+}
+
+</style>
+<body>
+
+<div class="bgimg w3-display-container" id="home">
+    <div class="w3-display-bottomleft w3-padding-large w3-margin" style="white-space:nowrap;">
+	  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">SMART LED DIMMER</span>
+    </div>
+</div>
+
+<p></p>
+
+<p>
+	The Smart LED Dimmer controls a 12V monochrome LED strip.
+	It uses an ESP8266 WiFi module and Arduino software to pulse width modulate the strip's power.
+	You control it with a momentary pushbutton switch or through its web interface.
+	The repository includes
+	SketchUp files for a 3D-printed case and push button mount
+	and instructions and code
+	allowing the dimmer to be recognized and controlled by a Samsung SmartThings hub.
+	While tapping the button is very convenient,
+	I find myself using voice commands and automated routines to control my dimmers more often than not.
+	(Since both Google and Alexa can connect to SmartThings.)
+</p><p>
+	The repository is at:  <a href="https://github.com/kit-barnes/smartLEDdimmer.git">
+		https://github.com/kit-barnes/smartLEDdimmer.git</a>
+</p>
+<center><a href="dimmerSchem.jpg" target="_blank" ><img src="dimmerSchem.jpg" style="max-height:100%"
+		class="w3-image w3-hover-opacity" alt="Dimmer Schematic"></a></center>
+
+<div style="margin:16px;clear:both;">
+	<div class="w3-row photos">
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="dimmer2.jpg" target="_blank" ><img src="dimmer2.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="Dimmer Breadboard"></a>
+		</div>
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="FET.jpg" target="_blank" ><img src="FET.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="FET Wiring"></a>
+		</div>
+
+	</div>
+	<p>
+	I initially used an NPN power transistor in designing the circuit
+	and my earlier case designs included a mount for a TO-3 transistor.
+	Breadboarding proved the bipolar device to be unsuitable
+	and I switched to a MOSFET.
+	Regrettably, I didn't find a suitable one in a TO-3 case
+	so I resigned myself to the effort of soldering leads onto the tiny surface mount device,
+	encapsulated it in multiple shrink-wraps,
+	and gave up my transistor mount.
+	(The resistor in the breadboard photo is left over from the bipolar circuit.)
+	
+	</p>
+</div>
+
+<div style="margin:16px;clear:both;">
+	<p>
+	As evidenced by the breadboard photo, I'd intended to use knots in the wires as strain relief.
+	A few wraps of heavier wire took up much less room in the case.
+	There are mountings for the ESP8266 module and the DC-DC converter
+	and the cover snaps on.
+	The pushbutton switch is press-fit into its mount.
+	</p>
+</div>
+
+<div style="margin:16px;clear:both;">
+	<div class="w3-row">
+
+		<div class="w3-col l3 m6" style="padding: 0px 16px 16px 0px;">
+			<a href="dimmer3.jpg" target="_blank" ><img src="dimmer3.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="dimmer3"></a>
+		</div>
+		
+		<div class="w3-col l3 m6" style="padding: 0px 16px 16px 0px;">
+			<a href="dimmer4.jpg" target="_blank" ><img src="dimmer4.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="dimmer4"></a>
+		</div>
+
+		<div class="w3-col l3 m6" style="padding: 0px 16px 16px 0px;">
+			<a href="dimmer5.jpg" target="_blank" ><img src="dimmer5.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="dimmer5"></a>
+		</div>
+		
+		<div class="w3-col l3 m6" style="padding: 0px 16px 16px 0px;">
+			<a href="dimmer6.jpg" target="_blank" ><img src="dimmer6.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="dimmer6"></a>
+		</div>
+
+	</div>
+</div>
+
