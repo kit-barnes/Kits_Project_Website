@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<title>XmasLites</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #333;
+  line-height: 1.6;
+}
+
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('XmasDevel.jpg');
+    background-attachment: scroll;
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+@media only screen and (min-width: 601px) {
+  .photos {width: 50%; float: left;}
+}
+
+</style>
+<body>
+
+<div class="bgimg w3-display-container" id="home">
+    <div class="w3-display-bottomleft w3-padding-large w3-margin" style="white-space:nowrap;">
+	  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">XMAS LITES</span>
+    </div>
+</div>
+
+<p></p>
+
+<div style="margin:16px 16px 16px 32px;">
+	<div class="w3-row photos w3-padding">
+		<div class="w3=col">
+			<div class="w3-row">
+
+				<div class="w3-col l6 m6 s6" style="padding: 0px 16px 16px 0px;">
+					<a href="XmasSparkle.gif" target="_blank" ><img src="XmasSparkle.gif" style="max-height:100%" class="w3-image w3-hover-opacity" alt="Sparkle"></a>
+				</div>
+
+				<div class="w3-col l6 m6 s6" style="padding: 0px 16px 16px 0px;">
+					<a href="XmasWaves.gif" target="_blank" ><img src="XmasWaves.gif" style="max-height:100%" class="w3-image w3-hover-opacity" alt="Waves"></a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<p>
+		Late in 2018, my wife and I decided we had to replace our ancient Christmas tree lights.
+		I definitely wanted LEDs and, as long as I was about it, individually addressable ones.
+		I ordered a couple of WS2811 strings, a power supply,
+		and a "14keys Wireless RF Led RGB Controller".
+		While that controller had an impressive array of routines to select from
+		and even allowed some customization, I was not happy with the patterns available - thus this project.
+	</p><p>
+		Because I had promised my wife the tree would be up with the lights on it by Thanksgiving
+		(she wanted a LOT of time for decorating),
+		I expected to still be working on the code while my controller was buried in the tree.
+		Consequently, I chose the NodeMCU platform with FTP and telnet servers
+		to facilitate remote development of the software.
+	</p>
+	<div style="clear:both;"></div>
+	<div class="w3-row photos w3-padding">
+		<div class="w3=col">
+			<div class="w3-row">
+				<div class="w3-col l12 m12 s12" style="padding: 0px 16px 16px 0px;">
+					<a href="XmasLites.jpg" target="_blank" ><img src="XmasLites.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="XmasLites"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p>
+	</p><p>
+		Schematic (with stocklist), source, and instructions are available at:
+		<br><center><a href="https://github.com/kit-barnes/XmasLites">
+			https://github.com/kit-barnes/XmasLites
+		</a></center><br>
+	</p><p>
+		The code is pretty much what was in place for Christmas.
+		The tree, LED strings, and controller are stored away for next season.
+		Sometime around Thanksgiving, I expect to be updating it again.
+	</p>
+</div>
+
+</body>
+</html>
