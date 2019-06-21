@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<title>Quadruped Robot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #333;
+  line-height: 1.6;
+}
+
+p {padding: 0px 16px 0px 16px;}
+
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('sg50test.jpg');
+    background-attachment: scroll;
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+@media only screen and (min-width: 601px) {
+  .photos {width: 50%; float: left;}
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	/* padding-bottom: 75%; /* 4:3 wcb */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+</style>
+<body>
+
+<div class="bgimg w3-display-container" id="home">
+    <div class="w3-display-bottomleft w3-padding-large w3-margin" style="white-space:nowrap;">
+	  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">QUADRUPED ROBOT</span>
+    </div>
+</div>
+
+<p></p>
+
+<div style="margin:16px;clear:both;">
+	<div class="w3-row photos">
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="scope1.jpg" target="_blank" ><img src="scope1.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="scope1"></a>
+		</div>
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="scope2.jpg" target="_blank" ><img src="scope2.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="scope2"></a>
+		</div>
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="legtest.jpg" target="_blank" ><img src="legtest.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="legtest"></a>
+		</div>
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<div class="videoWrapper">
+				<!-- Copy & Pasted from YouTube -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/pi3n5ZYatKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+
+	</div>
+	<p>
+	I'm pretty sure my inspiration for this project was Boston Dynamics's Big Dog.
+	I think the idea was to see just how cheaply I could build a walking quadruped.
+	Small inexpensive servos linked together with bent paper clips.
+	</p><p>
+	In 2008 I bought a few small servos and started playing with them 
+	using an Adafruit Boarduino (ATmega168) previously purchased to learn about the Arduino platform.
+	I decided my robot's legs would need 3 servos apiece: hip, knee, and
+	(because I envisioned it being able to turn while walking) rotate.
+	</p><p>
+	I also thought it would be a good idea to have the servos error signal available.
+	It would give me an indication of how much force the servo was exerting.
+	Most hobbyist servos don't expose it, but I thought I could get an approximation
+	of a servo's error by sensing its current draw.
+	Testing proved the idea; I could get the magnitude of the error, but not it's direction.
+	(Unless I remembered which way I'd been asking the servo to travel.)
+	</p>
+</div>
+<div style="margin:16px;clear:both;">
+	<p>
+		The Arduino platform was unsuited to my needs. 
+		so I switched to the AVR toolchain under Cygwin. 
+		I ordered more servos and a microcontroller with more IO: an ATmega644.
+		I also bought a pair of XBee radio modules to allow wireless control.
+	</p>
+</div>
+<div style="margin:16px;clear:both;">
+	<div class="w3-row photos">
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="quadruped.jpg" target="_blank" ><img src="quadruped.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="quadruped"></a>
+		</div>
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="XBeeATM168.jpg" target="_blank" ><img src="XBeeATM168.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="XBeeATM168"></a>
+		</div>
+
+	</div>
+	<p>
+	When the servos arrived I assembled the other 3 legs with more paper clips and,
+	using a piece of perf board as a backbone, the robot's skeleton.
+	I was ready to go wireless and resume testing.
+	My solderless breadboard circuit (with the ATmega168) was capable of controlling 2 legs.
+	I added one of the XBee radios to it and attached both it and
+	a holder with 4 AA NiMH rechargeable batteries to the bottom of the perf board.
+	It would control the "front" legs.
+	The rear legs would be raised out of the way
+	and that end of the robot suspended from a ridiculous set of wheels
+	I made from 4 plastic plates and wooden skewer.
+	</p>
+</div>
+
+<div style="margin:16px;clear:both;">
+	<div class="w3-row photos">
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<div class="videoWrapper">
+				<!-- Copy & Pasted from YouTube -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/kuApGBn8o8A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="schematic.png" target="_blank" ><img src="schematic.png" style="max-height:100%" class="w3-image w3-hover-opacity" alt="schematic"></a>
+		</div>
+
+	</div>
+	<p>
+	Despite an alarming amount of stagger and wobble, it managed to drag itself forward.
+	Encouraged, I proceeded ahead with the design and construction of the ATmega644 circuit.
+	Limited to 8 analog inputs, I decided I could do without error sensing on the rotate servos.
+	</p>
+</div>
+<div style="margin:16px;clear:both;">
+	<div class="w3-row photos">
+	
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="brainTop.jpg" target="_blank" ><img src="brainTop.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="brainTop"></a>
+		</div>
+		
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="brainWiring.jpg" target="_blank" ><img src="brainWiring.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="brainWiring"></a>
+		</div>
+
+	</div>
+	<p>
+	I decided it would be quicker and easier to wire the new controller point-to-point
+	(using primarily wire-wrap wire)
+	rather than designing, fabricating and assembling a printed wiring board.
+	</p>
+</div>
+
+<div style="margin:16px;clear:both;">
+	<div class="w3-row photos">
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="robot1.jpg" target="_blank" ><img src="robot1.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="robot1"></a>
+		</div>
+		
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<div class="videoWrapper">
+				<!-- Copy & Pasted from YouTube -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/QCKyaonQLIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+		
+	</div>
+	<p>
+	The software is far from finished - and,
+	since the robot has been packed away and untouched for a decade, may never be.
+	It accepts user-unfriendly commands over the XBee-provided serial link.
+	
+	No servo (or leg) positions are hard coded; there is storage for 10 leg positions
+	(30 servo positions shared by all legs)
+	and a positional offset (trim) for each of the 12 servos.
+	There are commands to set and display the leg positions and offsets
+	as well as to save and recall them from eeprom.
+	The walk command simply continuously cycles the legs through positions 0-5,
+	varying phase and direction by leg.
+	</p>
+</div>
+<div style="margin:16px;clear:both;">
+	<div class="w3-row photos">
+
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<div class="videoWrapper">
+				<!-- Copy & Pasted from YouTube -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/6ycGjUCCZNw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+		
+		<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="robot2.jpg" target="_blank" ><img src="robot2.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="robot2"></a>
+		</div>
+
+	</div>
+	<p>
+	The last version of the source code is here: <a href="test.c" target="_blank">test.c</a>.<br>
+	Missing are 3 include files which I believe were part of the AVR toolchain installation.
+	</p><p>
+	This document shows the leg positions used and phasing for the walk:
+	<a href="walk.pdf" target="_blank">walk.pdf</a>.
+	</p><p>
+	Maybe I'll get back to it someday (probably with sturdier legs) but...<br>
+	Hey! I got it to walk. 
+	</p>
+</div>
+
