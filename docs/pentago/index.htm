@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<title>Pentago Noob</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #333;
+  line-height: 1.6;
+}
+
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('PentagoGift.jpg');
+    background-attachment: scroll;
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+@media only screen and (min-width: 601px) {
+  .photos {width: 50%; float: right;}
+}
+
+</style>
+<body>
+
+<div class="bgimg w3-display-container" id="home">
+    <div class="w3-display-bottomleft w3-padding-large w3-margin" style="white-space:nowrap;">
+	  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">PENTAGO NOOB</span>
+    </div>
+</div>
+
+
+<div style="margin:16px 16px 16px 32px;">
+	<p>
+		<a href="https://en.wikipedia.org/wiki/Pentago" target="-blank">Pentago</a>
+		is a 2 player game invented by Tomas Flod&eacute;n.
+		The players alternate placing marbles on a 6 by 6 field,
+		trying to get 5 of their own marbles in a straight line.
+		The complication is that the board is divided into four 3 by 3 quadrants,
+		one of which must be rotated 90 degrees by the player after placing a marble.
+	</p><p>
+		I'd never heard of Pentago before I was given a copy as a Christmas present in 2008.
+		I enjoyed playing the game, but after the holiday visits were over,
+		lacked willing opponents.
+		So I decided to build one.
+	</p><p>
+	</p>
+	<h3>Flash Version</h3>
+	<div class="w3-row photos w3-padding">
+		<div class="w3=col">
+			<div class="w3-row">
+
+				<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+					<a href="FlashHtml.jpg" target="_blank" ><img src="FlashHtml.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="FlashHtml"></a>
+				</div>
+
+				<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+					<a href="FlashSwf0.jpg" target="_blank" ><img src="FlashSwf0.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="FlashSwf0"></a>
+				</div>
+
+				<div class="w3-col l6 m12" style="padding: 0px 16px 16px 0px;">
+					<a href="FlashSwf1.jpg" target="_blank" ><img src="FlashSwf1.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="FlashSwf1"></a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<p>
+		I first chose Macromedia Flash for my implementation
+		because of the ease with which graphics could be rotated
+		and its broad browser support (at the time).
+		It was exposed to the world at my former web site on home.att.net
+		and advertised to family and friends.
+	</p><p>
+		From a June 22, 2009 email:
+		<blockquote>
+		Yep, yet another Pentago version.
+		<br>
+		I fixed the bug KC pointed out and, as long as I was fooling around with the code anyway decided to try out an idea I had for a mobile phone (or other limited-screen-size) version.  I've downloaded the freely distributed development tools for the Android platform and am in the process of learning how to build apps for those phones.
+		<br>
+		My idea offers one way to avoid the extra space around the board required to slide out the quadrants, allowing a larger (and easier to operate) board.  Since I don't really consider it a game option, I didn't bother to put a control for it on the Options panel - It's hidden away. Flash applications (and some elements in them) can have context menus which appear when a user right-clicks (Windows) or Control-clicks (Macintosh) on them.  You will find such a menu (with a custom item) when you right-(or Control)-click on any of the twist controls in the new version.
+		</blockquote>
+	</p><p>
+		My browser of choice no longer supports Flash,
+		but Internet Explorer under Windows 10 runs my old files with a minimum of fuss.
+	</p><p>
+	<h3 style="width 100%;clear:both">Java Version</h3>
+	<div class="w3-row photos w3-padding">
+		<div class="w3=col">
+			<div class="w3-row">
+
+				<div class="w3-col l7 m12" style="padding: 0px 16px 16px 0px;">
+					<a href="Java0.jpg" target="_blank" ><img src="Java0.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="Java0"></a>
+				</div>
+
+				<div class="w3-col l5 m12" style="padding: 0px 16px 16px 0px;">
+					<a href="Java1.jpg" target="_blank" ><img src="Java1.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="Java1"></a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+		Despite the email above,
+		Android was not the next platform for my code.
+		Rummaging through old directories of source code,
+		I stumbled across this unremembered version.
+		I'm guessing the idea was to get the code translated to Java
+		before venturing into the unknown territory of Android.
+		While it is written as an applet, I have not found any evidence of
+		(nor do I remember)
+		it having ever been included in a web page.
+	</p><p>
+		Two things about this version surprised me.
+		First: the graphics are better than the Flash version
+		(better highlighting and rounded corners).
+		Second: while it uses the mobile style twisters,
+		it does not use the mobile style twist animation.
+	</p>
+	<h3 style="width 100%;clear:both">Android Version</h3>
+	<div class="w3-row photos w3-padding">
+		<div class="w3=col">
+			<div class="w3-row">
+
+				<div class="w3-col l3 m6 s6" style="padding: 0px 16px 16px 0px;">
+					<a href="Android1.jpg" target="_blank" ><img src="Android1.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="Android1"></a>
+				</div>
+
+				<div class="w3-col l3 m6 s6" style="padding: 0px 16px 16px 0px;">
+					<a href="Android3.jpg" target="_blank" ><img src="Android3.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="Android3"></a>
+				</div>
+
+				<div class="w3-col l3 m6 s6" style="padding: 0px 16px 16px 0px;">
+					<a href="Android2.jpg" target="_blank" ><img src="Android2.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="Android2"></a>
+				</div>
+
+				<div class="w3-col l3 m6 s6" style="padding: 0px 16px 16px 0px;">
+					<a href="AnEmulator.jpg" target="_blank" ><img src="AnEmulator.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="AnEmulator"></a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<p>
+		This is the version I've been playing on and off on my phones since
+		I bought my first Android phone July 21, 2012.
+		The latest APK was built in September 2012, but its source files go back to 2010.
+		I think that first phone came with Gingerbread
+		but the APK targets the older Android version Froyo.
+		The app was fully functional and running on the emulator
+		of the Android Development Toolkit by the end of 2010
+		when I sent a copy to my son (who already had an Android phone).
+	</p><p>
+		I don't remember why the highlights (on the marbles and dimples)
+		are missing from this version.
+		Most likely I initially skipped them for simplicity's sake
+		then either forgot or didn't bother to go back and add them.
+		I do remember deciding to simplify the controls.
+		I felt that a fingertip was nowhere near precise enough
+		(unlike a mouse pointer) to operate the move-recording bar
+		of the web-based versions.
+		The touch interface did, however, allow me to do away with the twist controls:
+		a brief flick of a finger will trigger a quadrant's rotation.
+		Much more intuitive and esthetically pleasing.
+		Less pleasing is the way I stuffed the whole interface to the top of the screen.
+		I should have at least made the status message at the top of the screen
+		take up more space and lowered the buttons and maybe made them bigger.
+		Since the APK carries a version of 0.8, I did not consider it finished.
+	</p><p>
+		I improved the maximum strength of the computer opponent in this version,
+		and reduced the number of difficulty levels to four,
+		including one that makes completely random moves.
+		I remember being able to beat the highest level occasionally,
+		back when I was working on the code and playing a lot.
+		Now I only play once or twice in a long while and,
+		despite that I set the difficulty lower,
+		I almost always find myself losing.
+	</p><p>
+		The app requires no permissions and works on all the current versions of Android
+		to date, including Android Q.  It even works in split screen,
+		although the buttons disappear.
+	</p>
+	<h3 style="width 100%;clear:both">Code Repository</h3>
+	<p>
+		The latest (if quite old) source and binaries for all 3 versions
+		plus some additional documentation are available at:
+		<br><center><a href="https://github.com/kit-barnes/PentagoNoob">
+			https://github.com/kit-barnes/PentagoNoob
+		</a></center><br>
+	</p>
+</div>
+
+</body>
+</html>
