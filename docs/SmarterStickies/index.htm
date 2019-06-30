@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<title>Smarter Stickies</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #333;
+  line-height: 1.6;
+}
+
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('stickies-Background.jpg');
+    background-attachment: scroll;
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+@media only screen and (min-width: 601px) {
+  .photo {width: 50%; float: right;}
+  .photos {width: 35%; float: right;}
+  .photoslft {width: 50%; float: left;}
+}
+
+</style>
+<body>
+
+<div class="bgimg w3-display-container" id="home">
+    <div class="w3-display-bottomleft w3-padding-large w3-margin" style="white-space:nowrap;">
+	  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">SMARTER STICKIES</span>
+    </div>
+</div>
+
+
+<div style="margin:16px 16px 16px 32px;">
+	<p>
+		Smarter Stickies was a
+		<a href="https://en.wikipedia.org/wiki/Yahoo!_Widgets">Yahoo! Widget</a>.
+		I say "was" because Yahoo! terminated support for its widgets in 2012.
+		Widgets were small decorative mini-applications that lived constantly on yur desktop.
+		You could choose from clocks, stock tickers, weather, news feeds, system monitors
+		and many other widgets.
+		Smarter Stickies provided reminder notes.
+		In the course of its six year lifespan,
+		it was downloaded about 100,000 times. 
+	</p>
+	<div class="w3-row photo w3-padding">
+
+		<div class="w3-col l12 m12" style="padding: 0px 16px 16px 0px;">
+			<center><img src="stickies-About.jpg" style="max-height:100%" class="w3-image" alt="stickies-About"></center>
+		</div>
+
+	</div>
+
+	<p>
+		I started using widgets shortly after Yahoo bought the Konfabulator widget engine
+		and released it for free.
+		There were maybe a dozen sticky note widgets available in the Yahoo! Widget Gallery
+		at the time and I tried many but found them lacking.
+		To get a widget with the features I wanted, I'd have to write it myself.
+		Primarily, I wanted to be able to hide and show individual notes
+		while retaining their screen positions (and other attributes) across restarts.
+		To be effective reminders, notes should reappear
+		and attract your attention at the appropriate time.
+		Therefore the widget's slogan:<br>
+		<center>"<i>smart enough to stay out of the way, until needed</i>"</center>
+	</p>
+	
+	<div class="w3-row photoslft w3-padding">
+
+		<div class="w3-col l12 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="help.html" target="_blank" ><center><img src="stickies-Help.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="stickies-Help"></center></a>
+		</div>
+
+	</div>
+
+	<p>
+		I may have spent more time developing the help for the widget
+		than I did on its code.
+		One early decision was to provide help as a single HTML file,
+		offloading the effort of displaying it to the users' browsers of choice.
+		Clicking on this image will open that file in your browser.
+		It is the user's manual for the widget.
+		It was intended to first educate the user and then to serve as a reference.
+		Accordingly, when the widget is first started,
+		it offers to display the help file and explains how to find it later.
+	</p><p>
+		An effective and useful help system was necessary because,
+		while I tried to make the user interface intuitive,
+		I was writing the widget primarily for myself
+		and I wanted it as efficient as practical.
+		Accordingly, some operations would be impossible without help.
+		See the <b>Alarm Dialog</b> section of the help file for an example.
+	</p>
+	<div style="clear:both"></div>
+	<p>
+		I submitted version 1.0 to the Yahoo! Widget Gallery in June 2006.
+		To my dismay, early users quickly discovered a serious flaw: disappearing stickies.
+		Yes, the notes were supposed to be able to be hidden,
+		but not so that you couldn't show (or find, or delete) them again.
+		Worse yet, some of them had expired alarms and were constantly beeping
+		and the engine (version 3) offered no way to remove a widget.
+	</p>
+	
+	<div class="w3-row photos w3-padding">
+
+		<div class="w3-col l12 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="Yahoo! Widget Gallery.pdf" target="_blank" ><center><img src="stickies-Gallery.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="stickies-Gallery"></center></a>
+		</div>
+
+	</div>
+
+	<p>
+		This image is of a copy of Smarter Stickies' page in the Yahoo Widget Gallery
+		taken 12 days after its initial appearance.
+		Sadly, the copy did not capture all the elements of the page,
+		and what's left is not properly rendered by the modern IE or Chrome.
+		The image links to a PDF created from a Firefox rendering.
+	</p><p>
+		I used the widget's gallery page to provide support.
+		Reading the comments in the PDF from the bottom up
+		will recount the history of that first bug and its resolution.
+		Version 1.1 patched over the problem and version 1.2
+		(using the undocumented constructor below) fixed it.
+	</p>
+	
+	<div class="w3-row w3-padding">
+
+		<div class="w3-col l12 m12" style="padding: 0px 16px 16px 0px;">
+			<a href="constructor.jpg" target="_blank" ><img src="constructor.jpg" style="max-height:100%" class="w3-image w3-hover-opacity" alt="constructor"></a>
+		</div>
+
+	</div>
+
+	<p>
+		After those first weeks no further flaws were uncovered
+		until the change to version 4 of the engine in 2007 broke some functionality.
+		Versions 1.5 and 1.6 addressed the problems caused by the engine upgrade.
+		The last version I submitted to the gallery in June 2007 was 1.7.
+		I continued to support the widget, checking its gallery page occasionally
+		for questions or problems not answered or solved already
+		by other users.
+	</p><p>
+		I used Smarter Stickies until 2012
+		when I got my first smartphone
+		(which more than replaced the widget's functionality).
+		My public support also ended that year
+		with the closing of the Yahoo! Widget Gallery.
+	</p><p>
+		Yahoo Widgets were built with XML and JavaScript.
+		The widget files delivered to users from the gallery were just relabeled ZIP archives
+		and their contents can easily be examined or extracted.
+		<br>
+		In the archive would be:
+		<ul>
+			<li><b>[widget-name].kon</b>
+			An XML file used by the engine to start the widget</li>
+			<li><b>widget.xml</b>
+			Used by the version 4 engine to configure its new widget dock</li>
+			<li>JavaScript and resource files as needed</li>
+		</ul>
+	</p><p>
+		Here is the Smarter Stickies version 1.7 widget file:<br>
+		<center><a href="Smarter Stickies.widget">Smarter Stickies.widget</a></center>
+	</p><p>
+		The Yahoo!! Widget Engine is still available on a few web sites and,
+		according to <a href="https://en.wikipedia.org/wiki/Yahoo!_Widgets">
+		this Wikipedia article</a>,
+		will still run on Windows 10.
+		To get the images shown here,
+		I chose to run my own archived copy
+		on an air-gapped virtual Windows XP instance.
+	</p>
+
+</div>
+
+</body>
+</html>

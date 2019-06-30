@@ -1,0 +1,1088 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+	<TITLE>Smarter Stickies Help</TITLE>
+	<STYLE type="text/css">
+
+	html {
+			margin: 0;
+			background-color: #ffff90;
+			}
+	body {
+			position: relative;
+			padding: 0em 2em 6em 14em;
+			margin: 0;
+			}
+
+	div.nav {
+			position: absolute;
+			width: 9em;
+			height: auto;
+			top: 1em; right: auto; bottom: 1em; left: 1em;
+			padding: 0em 0em 0em 0em;
+			}
+	body>div.nav {							/* not for ie6 */
+			width: 11em;
+			position: fixed
+			}
+
+	div.nav p {
+			display: block;
+			font-family: arial, verdana, sans-serif;
+			font-size: 90%;
+			margin: 1px 0em 1px 0em;
+			text-indent: 0;
+			text-align: left;
+			}
+	div.nav a{
+			display: block;
+			padding: 0.3em 0.3em 0.3em 0.7em;
+			border-left: 0.6em solid #882;
+			border-right: 0.6em solid #aa4;
+			background-color: #993;
+			color: #fff;
+			text-decoration: none;
+			width: 100%;
+			}
+	body>div.nav a{							/* not for ie6 */
+			width: auto;
+			}
+
+	div.nav a:hover {
+			border-left: 0.6em solid #26d;
+			border-right: 0.6em solid #6ae;
+			background-color: #28d;
+			}
+
+	h1, h2, h3, h4, DT {
+			font-family: "Comic Sans MS", cursive;
+			}
+	h2, h3, h4 {
+			margin-bottom: 0px;
+			}
+	table {
+			border-collapse: collapse;
+			margin-left: 2em;
+			margin-top: 1em;
+			}
+	td {
+			padding-left: 2em;
+			}
+	td.cmenu {
+			font: normal 80%/100% "Ariel", sans-serif;
+			width: 14em;
+			background-color: #C0C0C0;
+			padding: 1em;
+			border: 2px solid #000;
+			}
+	tr>td.cmenu {							/* not for ie6 */
+			width: 12em;
+			}
+	td.ckey {
+			padding-left: 0em;
+			}
+	p, ul{
+			margin-top: 0em;
+			margin-bottom: 0em;
+			}
+	dl {
+			border-collapse: collapse;
+			margin-left: 1em;
+			margin-bottom: 0.5em;
+			}
+	dd {
+			margin-left: 2em;
+			}
+	dd>img {
+			margin: 0px;
+			}
+	img {
+			margin-top: 8px;
+			margin-bottom: 8px;
+			margin-left: 8px;
+			margin-right: 8px;
+			}
+	em {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 84%;
+			font-family: arial, sans-serif;
+			}
+	.floatstop {
+			clear: both;
+			margin-top: 1em;
+			}
+	#padpic {
+			float: left;
+			width: 100px;
+			}
+	#almedtpic {
+			float: left;
+			width: 230px;
+			}
+
+	</STYLE>
+</HEAD>
+<BODY><P><A name="top"> </A></P>
+
+	<div class="nav">
+		<p><a href="#top">Top</a></p>
+		<p><a href="#concept">Concept</a></p>
+		<p><a href="#features">Features</a></p>
+		<p><a href="#getting_started">Getting Started</a></p>
+		<p><a href="#pad_menu">Pad Context Menu</a></p>
+		<p><a href="#sticky_menu">Sticky Context Menu</a></p>
+		<p><a href="#alarm_dialog">Alarm Dialog</a></p>
+		<p><a href="#search">Search Dialog</a></p>
+		<p><a href="#stickypref">Sticky Preferences</a></p>
+		<p><a href="#preferences">Widget Preferences</a></p>
+		<p><a href="#hotkeys">Hot Keys</a></p>
+		<p><a href="#ctrl-keys">Control Keys</a></p>
+		<p><a href="#bugs">Known Bugs</a></p>
+		<p><a href="#support">Support</a></p>
+	</div>
+
+	<A name="top"></A>
+	<H1>Smarter Stickies Help</H1>
+
+	<H2><A name="concept">Concept</A></H2>
+	<P>
+		Software "sticky" notes for your computer screen that are smart enough
+		to stay out of your way until you need them.
+		You can arrange to hide a Smarter Sticky until a specific time,
+		the next time you start your computer, or until you go looking for it.
+	</P>
+
+	<H2><A name="features">Features</A></H2>
+	<UL>
+		<LI>Multiple "stickies" may be individually sized and positioned.</LI>
+		<LI>Stickies may be hidden until needed.</LI>
+		<LI>Multiple mode search function.</LI>
+		<LI>Individual stickies may be set to be shown when the widget starts.</LI>
+		<LI>Each sticky has an alarm that may be set to show the sticky
+		at a specific time and date.</LI>
+		<LI>Alarms may be set to repeat - daily, weekly, monthly, or annually.</LI>
+		<LI>Stickies whose alarms have expired flash their borders
+		and sound an audible alert.</LI>
+		<LI>User chosen fonts, colors, and alarm sound.</LI>
+		<LI>Keyboard shortcuts ("hot keys") assigned by user.</LI>
+	</UL>
+
+	<H2><A name="getting_started">Getting Started</A></H2>
+ 	<DIV id="padpic"><IMG SRC="smartPad.gif" height=52px width=76px alt="pad"></DIV>
+	<P>The Smarter Stickies pad will be on the screen whenever the widget is running
+		<BR/>(unless it has been hidden).
+	</P><P class="floatstop">
+		If something isn't working the way you expect,
+		you might look in the <A href="#bugs">Known Bugs</A> section of this document.
+	</P>
+	<DL>
+		<DT>To create a new sticky</DT>
+		<DD>Double-clicking on the pad will create a new sticky.
+			The new sticky will be created in edit mode and selected
+			so you can just start typing or pasting its content.
+			You can also create a new sticky by selecting <EM>New Sticky</EM>
+			from the <A href="#pad_menu">Pad Context Menu</A>
+			or by dropping a text selection on the pad.
+			If you have assigned a "New Sticky" <A href="#hotkeys">Hotkey</A>,
+			it can be used.
+			Finally, you can make a copy of an existing sticky by selecting
+			<EM>Clone Sticky</EM> from its <A href="#sticky_menu">context menu</A>.
+			<BR/>You should move new stickies
+			to avoid stacking them all on top of each other.
+		<DT><A name="edit_mode">To edit sticky text</A></DT>
+		<DD>Stickies in edit mode are identified by a different border color
+			(defaults to a darker color)
+			and the resize handle
+			( <IMG SRC="drag.png" height=10px width=10px alt="drag handle"> )
+			in their lower right corner.
+			You can switch into and out of edit mode by double-clicking
+			on the sticky or by selecting <EM>Edit Sticky</EM>
+			from the <A href="#sticky_menu">Sticky Context Menu</A>.
+			<BR/>Editing is much the same as in most simple text editors for Windows
+			(such as Notepad).
+			Text can be manipulated by dragging and dropping selections
+			with the mouse at any time
+			and, while in edit mode, by <A href="#ctrl-keys">control key</A> combinations.
+		<DT>To resize a sticky</DT>
+		<DD>While in edit mode you can resize the sticky by dragging the handle
+			( <IMG SRC="drag.png" height=10px width=10px alt="drag handle"> )
+			at the lower right corner.
+			<BR/>Smarter stickies automatically wrap text
+			and display a vertical scroll bar if necessary.
+		<DT>To move a sticky</DT>
+		<DD>When not in edit mode,
+			you can move the sticky by dragging anywhere on it
+			(unless the "Lock Window Positions" preference has been selected).
+			When in edit mode, dragging is used to select text,
+			but you can still move the sticky by dragging on its border.
+		<DT>To set the alarm for a sticky</DT>
+		<DD>Select <EM>Set Alarm</EM> from the
+			<A href="#sticky_menu">Sticky Context Menu</A>
+			or press <EM>Ctrl-S</EM> while editing.
+			<BR/>Alarm times can be set as dates and/or times, or as delays.
+			See <A href="#alarm_dialog">Alarm Dialog</A>.
+		<DT>To turn off an alarm</DT>
+		<DD>When a sticky's alarm time is reached,
+			Both the widget and the sticky will be shown (not hidden),
+			the sticky will be moved on top (in front) of other windows,
+			flash its border, and periodically sound an audible alarm.
+			The alarm can be turned off by double clicking on the sticky
+			or by selecting <EM>Stop Alarm</EM> from the
+			<A href="#sticky_menu">Sticky Context Menu</A>.
+		<DT>To hide a sticky</DT>
+		<DD>Select <EM>Hide Sticky</EM>
+			from its <A href="#sticky_menu">Sticky Context Menu</A>
+			or press <EM>Ctrl-D</EM> while editing it.
+		<DT>To show a hidden sticky</DT>
+		<DD>The <A href="#pad_menu">Pad Context Menu</A>
+			contains a <A href="#search">search</A> function and other
+			options to show and hide stickies.
+			<A href="#hotkeys">Hot keys</A> can be assigned to search and show functions.
+		<DT>To hide the pad</DT>
+		<DD>Select <EM>Hide Pad</EM> from the
+			<A href="#pad_menu">Pad Context Menu</A>
+			or select <EM>Hide Pad on Startup</EM>
+			in the <A href="#preferences">Widget Preferences Dialog</A>
+			and restart the widget.
+		<DT>To show the pad</DT>
+		<DD>Click on the Smarter Stickies icon in the Widget Dock
+			or press the <EM>Search Stickies</EM> <A href="#hotkeys">hot key</A>.
+		<DT>To change the font or colors of a sticky</DT>
+		<DD>While in edit mode, press <EM>Ctrl-K</EM> to "randomly" change colors.
+			For more control select <A href="#stickypref">Sticky Preferences</A>
+			from the <A href="#sticky_menu">Sticky Context Menu</A>.</DD>
+		<DT>To set the font, colors, and size of new stickies</DT>
+		<DD>Set up a sticky with the colors, fonts, and size to be used for new stickies,
+			then check the <EM>Set default values per this sticky</EM> box in its
+			<A href="#stickypref">Sticky Preferences</A> dialog.
+			You can have new stickies randomly colored
+			by checking the <EM>Random colors for new stickies</EM> box.</DD>
+	</DL>
+
+	<H2><A name="pad_menu">Pad Context Menu</A></H2>
+	<P>
+		The pad's context menu contains items
+		not associated with individual stickies.
+		It is shown when you right-click on the pad.
+	</P>
+	<TABLE>
+		<TR>
+			<TD class="cmenu">About Smarter Stickies</TD>
+			<TD>Displays information about this widget and its author</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Widget Preferences...</TD>
+			<TD>Calls up the <A href="#preferences">Widget Preferences Dialog</A></TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">New Sticky (&lt;#&gt; exist)</TD>
+			<TD>Creates a new sticky of the default size, in the default position.
+			<BR/>(Shows the current total number of stickies.)</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Search Stickies...</TD>
+			<TD>Brings up the <A href="#search">Search Stickies Dialog</A></TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Show Alarmed</TD>
+			<TD>Makes visible all stickies whose alarms are set.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Show Unalarmed</TD>
+			<TD>Makes visible all stickies whose alarms are not set.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Hide All Stickies</TD>
+			<TD>Makes all stickies invisible.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Hide Pad</TD>
+			<TD>Makes the pad invisible.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Help</TD>
+			<TD>Displays help for the Smarter Stickies widget.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Hide Widget</TD>
+			<TD>Hides the pad and all stickies. (see <A href="#hidebug">strangeness</A>)</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Close Widget</TD>
+			<TD>Stops processing for the widget.</TD>
+		</TR>
+	</TABLE>
+
+    <H2><A name="sticky_menu">Sticky Context Menu</A></H2>
+    <P>
+    	A sticky's context menu contains items
+    	associated with that particular sticky
+    	(plus items supplied by the Yahoo Widget Engine).
+    	It is shown when you right-click on the sticky.
+    </P>
+	<TABLE>
+		<TR>
+			<TD class="cmenu">About Smarter Stickies</TD>
+			<TD>Displays information about this widget and its author</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Widget Preferences...</TD>
+			<TD>Calls up the <A href="#preferences">Widget Preferences Dialog</A></TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Sticky Preferences...</TD>
+			<TD>Calls up the <A href="#stickypref">Sticky Preferences Dialog</A></TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Print Sticky</TD>
+			<TD>Prints the sticky (see <A href="#printbug">strangeness</A>)</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Clone Sticky</TD>
+			<TD>Creates a copy of the sticky.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Edit Sticky</TD>
+			<TD>Toggles <A href="#edit_mode">edit mode</A> on and off.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Set Alarm</TD>
+			<TD>Displays the <A href="#alarm_dialog">Alarm Dialog</A>
+				for this sticky.
+				<BR/>(Appears only if alarm is not set.)</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Edit Alarm: &lt;alarm time&gt;</TD>
+			<TD>Displays the <A href="#alarm_dialog">Alarm Dialog</A>
+				for this sticky.
+				<BR/>(Appears only if alarm is set but not active.)</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Stop Alarm: &lt;alarm time&gt;</TD>
+			<TD>Turns off and unsets alarm.
+				<BR/>(Appears only if alarm is active.)</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Hide Sticky</TD>
+			<TD>Makes this sticky invisible.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Show at Start &amp; Wake</TD>
+			<TD>Makes this sticky visible whenever the widget is started
+				or following a suspension or hibernation.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Delete Sticky</TD>
+			<TD>Discards this sticky.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Help</TD>
+			<TD>Displays help for the Smarter Stickies widget.</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Hide Widget</TD>
+			<TD>Hides the pad and all stickies. (see <A href="#hidebug">strangeness</A>)</TD>
+		</TR>
+		<TR>
+			<TD class="cmenu">Close Widget</TD>
+			<TD>Exits the widget.</TD>
+		</TR>
+	</TABLE>
+	<P><BR/>
+    	Several of the items in the Sticky Context Menu are disabled when
+    	the alarm is active or when the Alarm Dialog is open.
+	</P>
+
+	<H2><A name="alarm_dialog">Alarm Dialog</A></H2>
+	<DIV id="almedtpic"><IMG SRC="almEdit.gif"width=200 height=64 alt="alarm dialog"></DIV>
+	<P>The Alarm Dialog allows you to set, change,
+		or unset the alarm time for a sticky.
+		It appears when you select it from the sticky's context menu
+		or when you press Ctrl-S while editing a sticky.
+		<BR/>Alarms can be set as dates and/or times
+		or as delays from the present time.
+	</P>
+    <P class="floatstop">
+	There are three buttons below the entry field.
+	</P>
+	<UL>
+		<LI><EM>Unset</EM> cancels the alarm and dismisses the dialog.</LI>
+		<LI><EM>Clear</EM> just clears the entry field.</LI>
+		<LI>
+			<EM>Enter</EM> acts exactly like the Enter key:
+			If your input can be interpreted as a future time,
+			the alarm is set to that time and the dialog box is dismissed.
+			Otherwise the system beep is sounded
+			and the entry field is left unchanged for you to edit.
+		</LI>
+	</UL>
+	<DL>
+		<DT>Entering a time and date</DT>
+		<DD>
+			Either the time or the date, or both, may be specified.
+			<BR/>Their order in the input doesn't matter
+			but neither specification may contain spaces.
+			If both time and date are specified,
+			the specifications must be separated
+			(normally by a space).
+			<DL>
+				<DT>To enter a time</DT>
+				<DD>
+					Times may be entered in either 12 or 24 hour formats.
+					The 24 hour format ("military" time) is the default.
+					12 hour format is selected by including an "am" or "pm"
+					anywhere in the input.
+					Midnight (0:00:00 or 12AM) is part of the day just starting.
+					<BR/>
+					Times are specified as
+					<EM>h:mm:ss</EM> or <EM>h:mm</EM> or even just <EM>h</EM>
+					where:
+					<UL>
+						<LI><EM>h</EM> is an hour from 0 to 23 or,
+						if <EM>am</EM> or <EM>pm</EM> is entered,
+						from 1 to 12</LI>
+						<LI><EM>mm</EM> is a minute from 00 to 59
+						(2 digits must be used)</LI>
+						<LI><EM>ss</EM> is a second from 00 to 59
+						(2 digits must be used)</LI>
+						<LI>Colons (<EM>:</EM>) are used to separate
+						hours from minutes and minutes from seconds.</LI>
+					</UL>
+					If you do not specify a time,
+					then 0:00:00 (midnight) is used.
+					<DL>
+						<DT>examples:</DT>
+						<DD>
+								18:00:00
+							<BR>18:00
+							<BR>18
+							<BR>6:00 PM
+							<BR>6pm
+							<BR>pM6 (strange-looking but allowed)
+							<BR>
+							<BR>All the above refer to the same time.
+						</DD>
+					</DL>
+				</DD>
+				<DT>To enter a date</DT>
+				<DD>
+					Dates can be specified as <EM>m/d/y</EM> or <EM>m/d</EM>,
+					where:
+					<UL>
+						<LI><EM>m</EM> is a month from 1 (Jan) to 12 (Dec)</LI>
+						<LI><EM>d</EM> is the day of the month from 1 to 31</LI>
+						<LI><EM>y</EM> is a year</LI>
+						<LI>Slashes (<EM>/</EM>) are used to separate
+						months from days and days from years.</LI>
+					</UL>
+					If <EM>y</EM> is less than 1000,
+					the year is understood to be 2000 plus <EM>y</EM>.
+					If the year is not specified,
+					the current year is used
+					unless that date (and time) is already past,
+					in which case the next year is used.
+					<BR/>If no date is specified,
+					the current date is used
+					unless the time specified is already past,
+					in which case the next day is used.
+					If both a date and time are specified they must be separated
+					(normally by one or more spaces).
+					<DL>
+						<DT>examples:</DT>
+						<DD>
+								5/1/2007 0:01:00
+							<BR>5/1/7 12:01 AM
+							<BR>0:01 5/1
+							<BR>5/1Am12:01 (strange but allowed)
+							<BR>
+							<BR>All of these refer to one minute past midnight May 1st
+							(the night of April 30th).  The first two are no longer valid
+							because they refer to a date in the past.
+							The other two refer to the May 1st coming next.
+						</DD>
+					</DL>
+				</DD>
+			</DL>
+		</DD>
+		<DT>Entering a repeating alarm</DT>
+		<DD>
+			Alarms may be arranged to repeat
+			(automatically reset themselves to a new date when acknowledged).
+			You can set an alarm to go off every day,
+			on specified days of the week,
+			on the same day or date every month,
+			or on the same day or date every year.
+			Repeating alarms are specified as a modified date
+			and, like dates, can be combined with times in 12 or 24 hour formats.
+			An asterisk (*) is used to specify repeating alarms.
+			<DL>
+				<DT>Every Day</DT>
+				<DD>
+					The simplest repeating alarm to specify:
+					just replace the date with a single asterisk
+					<BR><EM>examples:</EM>
+						<TABLE ALIGN="left" BORDER=0 CELLSPACING=2 CELLPADDING=0>
+							<TR><TD VALIGN="top">*</TD>
+								<TD>every day at midnight</TD>
+							</TR>
+							<TR><TD VALIGN="top">* 6:00</TD>
+								<TD>every day at 6:00 AM</TD>
+							</TR>
+							<TR><TD VALIGN="top">8pm*</TD>
+								<TD>every day at 8:00 PM</TD>
+							</TR>
+						</TABLE>
+				    <P class="floatstop"><BR/>
+					There must be a space (or at least an "am" or "pm")
+					between the asterisk and any time specification.
+				</DD>
+				<DT>Every Week on Specific Days of the Week</DT>
+				<DD>
+					An asterisk followed by numbers corresponding to
+					the days of the week on which the alarm should go off.
+					<BR/>0=Sunday, 1=Monday, 2=Tuesday, ... 6=Saturday
+					<BR><EM>examples:</EM>
+						<TABLE ALIGN="left" BORDER=0 CELLSPACING=2 CELLPADDING=0>
+							<TR><TD VALIGN="top">*0</TD>
+								<TD>every Sunday at midnight</TD>
+							</TR>
+							<TR><TD VALIGN="top">10pm *6</TD>
+								<TD>10:00 PM every Saturday</TD>
+							</TR>
+							<TR><TD VALIGN="top">*12345 6</TD>
+								<TD>every weekday at 6:00 (AM)</TD>
+							</TR>
+						</TABLE>
+				    <P class="floatstop"><BR/>
+				    There must be NO spaces between the asterisk and
+				    the numbers representing the days of the week.
+				</DD>
+				<DT>Every Month on a Specific Day</DT>
+				<DD>
+					Specifying a date in this way will allow you to set an alarm for
+					days of the month like the second Tuesday or the last Sunday.
+					The form of the specification is <EM>n*d</EM> where:
+					<UL>
+						<LI><EM>n</EM> is a week number from 1 to 5</LI>
+						<LI><EM>d</EM> is a day of the week from 0 (Sunday) to 6 (Saturday)</LI>
+					</UL>
+					Week number 5 is special in that it refers to the last occurrence
+					of a day in a month even if there are only 4 occurrences.
+					<BR><EM>examples:</EM>
+						<TABLE ALIGN="left" BORDER=0 CELLSPACING=2 CELLPADDING=0>
+							<TR><TD VALIGN="top">1*0</TD>
+								<TD>First Sunday (at midnight)</TD>
+							</TR>
+							<TR><TD VALIGN="top">12 pm 5*6</TD>
+								<TD>Noon on last Saturday</TD>
+							</TR>
+							<TR><TD VALIGN="top">2*3 10:30</TD>
+								<TD>Every second Wednesday at 10:30 (AM)</TD>
+							</TR>
+						</TABLE>
+				    <P class="floatstop"><BR/>
+				</DD>
+				<DT>Every Month on a Specific Date</DT>
+				<DD>
+					To set an alarm to go off on the same date of every month
+					the form of the specification is <EM>*/dd</EM> where:
+					<UL>
+						<LI><EM>dd</EM> is the day of the month (from 1 to 31)</LI>
+					</UL>
+					<BR><EM>examples:</EM>
+						<TABLE ALIGN="left" BORDER=0 CELLSPACING=2 CELLPADDING=0>
+							<TR><TD VALIGN="top">*/1</TD>
+								<TD>the 1st of every month (at midnight)</TD>
+							</TR>
+							<TR><TD VALIGN="top">10pm */16</TD>
+								<TD>10:00 PM on the 16th of every month</TD>
+							</TR>
+							<TR><TD VALIGN="top">*/31</TD>
+								<TD>The 31st of every month that has a 31st.
+									<BR/>(Skips other months.)</TD>
+							</TR>
+						</TABLE>
+				    <P class="floatstop"><BR/>
+				</DD>
+				<DT>Every Year on a Specific Day</DT>
+				<DD>
+					Allows setting repeating alarms for days like
+					the second Friday in March or the last Sunday in June.
+					The form of the specification is <EM>m/n*d</EM> where:
+					<UL>
+						<LI><EM>m</EM> is a month from 1 to 12</LI>
+						<LI><EM>n</EM> is a week number from 1 to 5</LI>
+						<LI><EM>d</EM> is a day of the week from 0 (Sunday) to 6 (Saturday)</LI>
+					</UL>
+					Week number 5 is special in that it refers to the last occurrence
+					of a day in a month even if there are only 4 occurrences.
+					<BR><EM>examples:</EM>
+						<TABLE ALIGN="left" BORDER=0 CELLSPACING=2 CELLPADDING=0>
+							<TR><TD VALIGN="top">12/1*0</TD>
+								<TD>First Sunday in December (at midnight)</TD>
+							</TR>
+							<TR><TD VALIGN="top">12 pm 8/5*6</TD>
+								<TD>Noon on last Saturday in August</TD>
+							</TR>
+							<TR><TD VALIGN="top">1/2*3 10:30</TD>
+								<TD>The second Wednesday in January at 10:30 (AM)</TD>
+							</TR>
+						</TABLE>
+				    <P class="floatstop"><BR/>
+				</DD>
+				<DT>Every Year on a Specific Date</DT>
+				<DD>
+					To set an alarm to go off on the same date every year
+					the form is <EM>m/d/*</EM> where:
+					<UL>
+						<LI><EM>m</EM> is a month from 1 to 12</LI>
+						<LI><EM>d</EM> is the day of the month from 1 to 31</LI>
+					</UL>
+					<BR><EM>examples:</EM>
+						<TABLE ALIGN="left" BORDER=0 CELLSPACING=2 CELLPADDING=0>
+							<TR><TD VALIGN="top">4/15/*</TD>
+								<TD>April 15th at midnight</TD>
+							</TR>
+							<TR><TD VALIGN="top">9pm 7/4/*</TD>
+								<TD>9:00 PM on the 4th of July</TD>
+							</TR>
+						</TABLE>
+				    <P class="floatstop"><BR/>
+				</DD>
+			</DL>
+		</DD>
+		<DT>Entering a delay</DT>
+		<DD>
+			You may enter the alarm time as a delay
+			or interval from the present time.
+			The interval may be expressed as any number of days,
+			hours, minutes, or seconds, and combinations of them.
+			The format is <EM>Wd Xh Ym Zs</EM> where:
+			<UL>
+				<LI><EM>W</EM> is the number of days</LI>
+				<LI><EM>X</EM> is the number of hours</LI>
+				<LI><EM>Y</EM> is the number of minutes</LI>
+				<LI><EM>Z</EM> is the number of seconds</LI>
+			</UL>
+			Any of the elements (number+letter) may be missing,
+			but the order of the remaining elements must be as shown.
+			No spaces are allowed between a number and its associated letter.
+			<BR><BR><EM>examples:</EM>
+				<TABLE ALIGN="left" BORDER=0 CELLSPACING=2 CELLPADDING=0>
+					<TR><TD VALIGN="top">14d</TD>
+						<TD>two weeks from now</TD>
+					</TR>
+					<TR><TD VALIGN="top">2h 30m</TD>
+						<TD>2½ hours from now</TD>
+					</TR>
+					<TR><TD VALIGN="top">1h 1800s</TD>
+						<TD>2½ hours from now</TD>
+					</TR>
+					<TR><TD VALIGN="top">1h 30m 3600s</TD>
+						<TD>2½ hours from now</TD>
+					</TR>
+					<TR><TD VALIGN="top">0d2h29m60s</TD>
+						<TD>2½ hours from now</TD>
+					</TR>
+				</TABLE>
+		    <P class="floatstop"><BR/>
+		    NOTE: The alarm set may differ by an hour from your expectation
+		    if the delay interval spans a Daylight Savings Time change.
+		</DD>
+	</DL>
+    <P class="floatstop">
+	<BR>You can check how your input will be interpreted
+	before setting the alarm by pressing the <EM>tab</EM> key.
+	Pressing <EM>tab</EM> will replace your input text with
+	the interpreted time and date.
+	If your input cannot be interpreted,
+	or if the result is in the past, the field will be blank.
+	If the resulting date is what you wanted,
+	you can then just enter it.
+	Otherwise, pressing <EM>tab</EM> a second time
+	will restore your original input.
+    </P>
+    <H2><A name="search">Search Dialog</A></H2>
+		<P>
+			The Search dialog enables you to enter a search term,
+			search through the text of all stickies,
+			and show or hide individual stickies
+			depending on whether or not the search found a match
+			in that sticky.
+			Select <EM>Search Stickies</EM> from
+			the <A href="#pad_menu">Pad Context Menu</A>
+			to display the Search Dialog.
+		</P>
+		<UL>
+			<LI><EM>Enter search term:</EM> enter
+				the text or a pattern to be found.
+				If you enter nothing, all stickies will match.
+				If you enter a single space, all stickies containing
+				any spaces will match.</LI>
+			<LI><EM>Ignore case</EM> If checked, the case
+				of alphabetic characters will be ignored.
+				For example, the search term "cat" will find "Cat"
+				(as well as "cat", "cAT", etc.)</LI>
+			<LI><EM>Use regular expressions</EM> If checked,
+				the search term will be taken as a regular expression.
+				Do <EM>not</EM> enclose it in the usual slashes ("/").
+				For instance, to find all notes containing either
+				"cat" or "dog", you could use "(cat|dog)".
+				<BR/>Regular expressions are well beyond
+				the scope of this help document
+				but
+				<A href="http://www.google.com/search?q=JavaScript+regular+expression">
+				an Internet search</A> should turn up many tutorials and references.
+				The search function uses JavaScript regular expressions
+				as implemented by the Yahoo Widget Engine.</LI>
+			<LI><EM>Mode:</EM> selects the action to perform
+				(show or hide) and the stickies
+				(those with or without the search term)
+				on which to perform it.</LI>
+		</UL>
+    <H2><A name="stickypref">Sticky Preferences</A></H2>
+		<P>
+			In the Sticky Preferences Dialog you can set attributes
+			(such as color and font)
+			particular to individual stickies.
+			Select <EM>Sticky Preferences</EM> from
+			the <A href="#sticky_menu">Sticky Context Menu</A>
+			to display the Stickies Preferences Dialog.
+		</P>
+		<UL>
+			<LI><EM>Text Color</EM> - the color of the letters and other characters</LI>
+			<LI><EM>Sticky Color</EM> - the background color of the sticky</LI>
+			<LI><EM>Border Color</EM> - the normal color of the edges of the sticky</LI>
+			<LI><EM>Active Color</EM> - the color of the edges of the sticky
+				when the sticky is in <A href="#edit_mode">edit mode</A>
+				Also used to attract attention when an alarm goes off
+				by alternating with the normal border color.</LI>
+			<LI><EM>Typeface</EM> - the font (Arial, Times New Roman, ...)
+				and its style (bold, italic, ...)</LI>
+			<LI><EM>Text Size</EM> - the size of the text in points.
+				Only positive whole numbers are accepted.</LI>
+			<LI><EM>Set default values per this sticky</EM>
+				<BR/>The default values are used when new stickies are created.
+				If this checkbox is checked when the dialog is saved,
+				the initial colors, typeface, type size, position and size
+				for new stickies will be set
+				from those of the current sticky.</LI>
+			<LI><EM>Random colors for new stickies</EM>
+				<BR/>When this box is checked, new stickies will be created with
+				a randomly selected hue for the background and border colors,
+				The text color will be set to black.</LI>
+		</UL>
+	<H2><A name="preferences">Widget Preferences</A></H2>
+		<P>
+			The Smarter Stickies Widget Preferences Dialog
+			contains controls used to set options
+			not associated with individual stickies.
+			Select <EM>Widget Preferences</EM> from
+			either the <A href="#pad_menu">Pad Context Menu</A>
+			or the <A href="#sticky_menu">Sticky Context Menu</A>
+			to display the Widget Preferences Dialog.
+			Clicking the gear button on the Smarter Stickies dock icon
+			will also display it.
+		</P>
+		<H3>General tab</H3>
+		<UL>
+			<LI><EM>Sticky Folder</EM> - The location where sticky files are stored.
+			    These are XML encoded files, not meant to be edited.
+			    When this preference is changed,
+			    existing files are moved to the new location.
+			    Leaving this preference blank causes sticky files to be stored
+			    in the default folder created by the Yahoo Widget Engine.
+			    </LI>
+			<LI><EM>Alarm Sound</EM> - The sound to be played periodically
+				when the alarm goes off.  The control initially offers
+				a choice of several sounds provided with the widget,
+				but you can browse elsewhere to
+				select any suitable sound file.</LI>
+			<LI><EM>Pad Color</EM> - the color of the Smarter Stickies Pad,
+				unless the following option is set.</LI>
+			<LI><EM>Set pad color to default sticky color</EM></LI>
+			<LI><EM>Hide pad on startup</EM> - If this checkbox is selected,
+				the pad will be hidden when the widget starts.
+				To show the pad: right-click on
+				the Yahoo Widget Engine icon in the system tray
+				and select <EM>Smarter Stickies</EM> from the menu.</LI>
+			<LI><EM>Values</EM> - Selects the values to be changed
+				by the following options.</LI>
+			<LI><EM>Set defaults to original values</EM>
+				<BR/>If this checkbox is selected when save is pressed,
+				the new sticky default values
+				selected by the <EM>Values</EM> option above,
+				will be set to the original ("factory") settings.
+				(Since I like tiny little yellow stickies
+				scribbled on with black felt tips,
+				guess what the factory settings might be.)</LI>
+			<LI><EM>Set visible stickies to default values</EM>
+				<BR/>If this checkbox is selected when save is pressed,
+				the new sticky default values
+				selected by the <EM>Values</EM> option above,
+				will be applied to all visible stickies.
+				This option is applied after
+				<EM>Set defaults to original values</EM>,
+				so if they are both checked, all visible stickies
+				will be set to whatever factory values are selected.</LI>
+		</UL>
+		<H3><A name="hotkeys">Hot Keys tab</A></H3>
+		<P>
+			Hot keys are the Yahoo Widget Engine implementation of keyboard shortcuts,
+			a combination of keys assigned to trigger an action.
+			They are implemented at the system level,
+			meaning that they will perform their actions
+			whenever the Smarter Stickies widget is running,
+			even when another widget (or application) is active.
+			To avoid breaking the functionality of other applications,
+			you must take care to avoid assigning key combinations
+			already in use.
+		</P><P class="floatstop">
+			The following keys may be used:
+			UpArrow, DownArrow, LeftArrow, RightArrow, F1 through F16,
+			Insert, Delete, Home, End, PageUp, PageDown,
+			PrintScreen, ScrollLock, Pause, Enter, Return, Backspace,
+			Space, Tab, and Escape.
+		</P><P class="floatstop">
+			At least one modifier is required which is Control by default.
+			The other possible modifiers are Shift and Alt.
+			Any letter or punctuation key may be used for a hot key
+			but then at least two modifiers must be specified.
+		</P><P class="floatstop">
+			Hot keys can be assigned to the following actions:
+		</P>
+		<UL>
+			<LI><EM>New Sticky</EM> - Creates a new sticky.</LI>
+			<LI><EM>Search Stickies</EM> - Opens the <a href="#search">Search Dialog</a>.</LI>
+			<LI><EM>Hide/Show All Stickies</EM> -
+				If any stickies are visible (other than stickies whose alarms are active)
+				this hotkey will hide them,
+				otherwise it will show all stickies.</LI>
+			<LI><EM>Delete Sticky</EM> - Deletes the currently selected sticky (if any),
+				otherwise sounds the system beep.
+				Stickies are selected when they are created, clicked on,
+				or their alarms sound.
+				They generally remain selected until something else is clicked on.</LI>
+		</UL>
+		</P><P class="floatstop">
+			Pressing any of the hot keys
+			(with the exception of Delete Sticky)
+			will cause the widget to be shown (un-hidden).
+		</P>
+		<H3>Window tab</H3>
+		<P>
+			The Window tab is furnished by the Yahoo Widget Engine
+			and is common to most widgets.
+		</P>
+		<UL>
+			<LI><EM>Window Level</EM> - (default is Normal)<BR/>
+				Normal, Keep on Top, and Keep Below all seem to work correctly.
+				A sticky whose alarm has gone off will be moved to the top
+				and will return to its assigned level when the alarm is turned off.
+			<LI><EM>Ignore Mouse</EM> - (default is unchecked)<BR/>
+				Works just as advertised
+				but controlling Smarter Stickies with just the keyboard
+				is not yet feasible.</LI>
+			<LI><EM>Prevent Dragging</EM> - (default is unchecked)<BR/>
+				You will still be able to drag stickies
+				by their borders when in edit mode.</LI>
+			<LI><EM>Opacity</EM> - (default is 100%)<BR/>
+				The pad and all stickies share the same value.</LI>
+		</UL>
+	<H2><A name="ctrl-keys">Control Keys</A></H2>
+		<P>
+			Control keys, unlike hot keys, are not assignable
+			and are active only when the text cursor
+			(a blinking vertical bar or selected text) is shown in a sticky.
+			Here's a list of all the control keys enabled in Smarter Stickies:
+		</P>
+			<TABLE ALIGN="left" BORDER=0 CELLSPACING=2 CELLPADDING=0>
+				<TR><TD VALIGN="top" style="min-width:46px">Ctrl-S</TD>
+					<TD>Brings up the Set Alarm Dialog for this sticky.</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-D</TD>
+					<TD>Exit edit mode on this sticky and hide it.</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-N</TD>
+					<TD>Exit edit mode on this sticky and start editing
+					    the next visible (shown) sticky.</TD>
+				</TR>
+				<TR><TD VALIGN="top"></TD>
+					<TD>(will not select stickies with active alarms.)</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-P</TD>
+					<TD>Prints the sticky (see <A href="#printbug">strangeness</A>)</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-K</TD>
+					<TD>Change sticky colors to a randomly selected hue
+						for the background and borders and black text.</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-A</TD>
+					<TD>Select all text. (Has a <A href="#cutpastebug">bug<A>.)</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-C</TD>
+					<TD>Copy selection to clipboard.</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-X</TD>
+					<TD>Cut selection to clipboard.</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-V</TD>
+					<TD>Paste clipboard contents to text cursor or selection</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-Z</TD>
+					<TD>Undo last edit (multiple undo's permitted).</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-Y</TD>
+					<TD>Re-do last undo (multiple re-do's permitted).</TD>
+				</TR>
+				<TR><TD VALIGN="top"></TD>
+					<TD>(Edit history is lost when widget is restarted.)</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-E</TD>
+					<TD>Center line.</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-L</TD>
+					<TD>Left justify line.</TD>
+				</TR>
+				<TR><TD VALIGN="top">Ctrl-R</TD>
+					<TD>Right justify line.</TD>
+				</TR>
+				<TR><TD VALIGN="top"></TD>
+					<TD>(Centering and right justification cannot be saved
+					    - All lines revert to left justified when widget is started.)</TD>
+				</TR>
+			</TABLE>
+		<P class="floatstop">
+			Additionally, all the cursor control keys ( arrows, Home, End, Page Up & Dn)
+			work as expected
+			and the Insert key will toggle between insert and overwrite modes.<P/>
+	<H2><A name="bugs">Known Bugs and Other Strangeness</A></H2>
+		<P>
+		</P>
+		<DL>
+			<DT><A name="printbug">Printing strangeness</A></DT>
+			<DD>
+				There is no support for printing in the Widget Engine.
+				Printing is accomplished by creating a temporary text file (named "Sticky")
+				and handing it off to Windows Notepad to print on the default printer.
+				This method causes the notepad application to briefly appear
+				whenever a sticky is printed.
+				No font or color information is passed to Notepad.
+				The text of the sticky is printed in Notepad's default font and format.
+				By default, Notepad prints the filename (Sticky) at the top
+				and the page number at the bottom of each page it prints.
+				These defaults (and others) can be changed in Notepad's "Page Setup" dialog.
+			</DD>
+			<DT><BR/><A name="cutpastebug">Cut &amp; Paste</A></DT>
+			<DD>
+				When editing sticky text,
+				the sequence "Ctrl-A, Ctrl-C, Ctrl-V"
+				appends an extra newline.
+				It should have no effect
+				(other than moving the cursor to the end of the text).
+				Seems to only be a problem when both the source and destination
+				are widgets.
+			</DD>
+			<DT><BR/><A name="hidebug">Hide Widget strangeness</A></DT>
+			<DD>
+				The new <EM>Hide Widget</EM> item (furnished by the Widget Engine)
+				in the context menus of the pad, individual stickies,
+				and the dock icon (and the button in the dock icon)
+				hide the widget as a whole -
+				different from hiding the pad and individual stickies.
+				When an alarm goes off or a hot key is pressed,
+				the widget (as a whole) must be un-hidden
+				in order to allow whatever needs to be seen to be visible.
+				To avoid confusion, you might avoid using <EM>Hide Widget</EM>.
+			</DD>
+			<DT><BR/><A name="hudbug">Heads Up Display - <EM>fixed in Widget Engine version 4.0.2</EM></A></DT>
+			<DD>
+				In general, only widgets that you have hidden (with "Hide Widget")
+				appear in the Heads Up Display.
+				Others may sometimes be visible, but when you click on them they dissappear.
+				Strangely, if you have hidden the sticky pad,
+				then any non-hidden stickies will appear.
+			</DD>
+			<DT><BR/><A name="hotkeybug">Hot Keys - <EM>fixed in Widget Engine version 4.0.2</EM></A></DT>
+			<DD>
+				When any preference dialog containing hot keys is opened,
+				any unassigned hot keys are shown as "2" rather than "None".
+				For the Smarter Stickies widget, this is a minor bug
+				because "2" will not be accepted as an assignment.
+			</DD>
+		</DL>
+	<H2><A name="support">Support</A></H2>
+		<P>
+			Support is available at the
+			<A href="http://widgets.yahoo.com/gallery/view.php?widget=39887">
+			Smarter Stickies page</A>  in the Yahoo Widget Gallery.
+			Before posting a question or problem report,
+			please review the existing entries
+			to see if your problem has already been addressed.
+		</P>
+		<DL>
+			<DT>To recover a deleted sticky</DT>
+			<DD>
+				<UL>
+					<LI><EM>Close the Smarter Stickies widget</EM>
+					- ideally before creating any new stickies.</LI>
+					<LI><EM>Restore the deleted sticky</EM>
+					- from the Recycle Bin</LI>
+					<LI><EM>Restart the Smarter Stickies widget</EM></LI>
+				</UL>
+				By default, stickies are stored as files in the Smarter Stickies data folder
+				(a location determined by The Yahoo Widget Engine).
+				For version 3.14 of the engine it is located at:
+				"C:\Documents and Settings\[user]\Local Settings\Application Data\Yahoo\Widget Engine\Widget Data\Smarter_Stickies".
+				If you have set the <EM>Sticky Folder</EM> preference,
+				the sticky files are stored in the directory you specified.
+				<BR/>The sticky files are named sticky(#).xml where # is a number.
+				If you've created any new stickies after deleting the sticky to be recovered, there may be a name conflict since the numbers are reused.
+				In this case just rename the new sticky
+				(by changing the number)
+				before restoring the deleted sticky.
+			</DD>
+			<DT><BR/>To recover a lost sticky</DT>
+			<DD>
+				Prior to Smarter Stickies version 1.2,
+				stickies could be lost far off-screen due to resolution changes.
+				(Version 1.1 contained a patch to place them back on screen.)
+				While the problem has been corrected in version 1.2,
+				it is still possible to move stickies so that they are very difficult
+				to see.  Accordingly, here is a method (thanks to Sherm)
+				to recover those stickies (in Windows).
+				<UL>
+					<LI><EM>Ensure that the sticky you wish to recover is not hidden</EM>
+						- by selecting Show Alarmed or Show Unalarmed or both.</LI>
+					<LI><EM>Open the Application tab of the Windows Task Manager</EM>
+						- There will be a "Yahoo!Widgets-Smarter_Stickies"
+						entry for the pad (if it is not hidden)
+						and for each not-hidden sticky.</LI>
+					<LI><EM>Right click on each Smarter Stickies entry and select Maximize</EM>
+					- the corresponding item (pad or sticky) will be moved
+					to the upper left corner of the screen.</LI>
+				</UL>
+			</DD>
+			<DT><BR/>To uninstall the Smarter Stickies widget</DT>
+			<DD>
+				<UL>
+					<LI><EM>Close the Smarter Stickies widget</EM></LI>
+					<LI><EM>Delete the Smarter_Stickies.widget file</EM></LI>
+				</UL>
+				These first two steps can be accomplished by selecting <EM>Delete Widget</EM>
+				from the Smarter Stickies dock icon context menu.
+				The following steps are optional.
+				<UL>
+					<LI><EM>Delete the Smarter Stickies data folder</EM>
+						- (See "To recover a deleted sticky" for location)</LI>
+					<LI><EM>Delete the Stickies Folder</EM>
+						- (if you have set that preference)</LI>
+					<LI><EM>Delete the Smarter Stickies preferences</EM>
+						- in HKEY_CURRENT_USER|Software|Yahoo|WidgetEngine|Widgets</LI>
+				</UL>
+			</DD>
+		</DL>
+</BODY>
+</HTML>
